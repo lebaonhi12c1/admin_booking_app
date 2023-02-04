@@ -1,0 +1,18 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+:root{
+    --color_primary: orangered;
+}
+ul{
+    list-style: none;
+}
+input{
+    border-style: ridge;
+}
+input:focus-within{
+    outline: none;
+}

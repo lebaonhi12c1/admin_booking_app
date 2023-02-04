@@ -1,0 +1,43 @@
+.sidebar{
+    flex: 1;
+    border-right: 1px solid #ccc;
+    .top{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid #ccc;
+        height: 50px;
+    }
+    .center{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin: 24px 0;
+        .control_box{
+            .heading{
+                text-transform: uppercase;
+                color: #aaa;
+                font-weight: 500;
+                font-size: 14px;
+                padding-left: 16px;
+            }
+            .control_content{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                padding: 8px 24px;
+                user-select: none;
+                white-space: nowrap;
+                transition: 0.2s;
+                &:hover{
+                    color: #fff;
+                    background-color: orangered;
+        
+                }
+                .icon{
+                    color: var(--color_primary);
+                }
+            }
+        }
+    }
+}
