@@ -5,7 +5,9 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 :root{
-    --color_primary: orangered;
+    --color_primary: #333;
+    --hover_color: #666;
+    --active_color: #333;
 }
 ul{
     list-style: none;

@@ -1,7 +1,7 @@
 .home{
     display: flex;
     .home_container{
-        background-color: lightblue;
+        background-color: var(--color_primary);
         flex: 5;
     }
 }

@@ -1,17 +1,21 @@
 .sidebar{
+    $height: 50px;
     flex: 1;
+    height: 100vh;
     border-right: 1px solid #ccc;
     .top{
         display: flex;
         justify-content: center;
         align-items: center;
         border-bottom: 1px solid #ccc;
-        height: 50px;
+        height: $height;
     }
     .center{
         display: flex;
         flex-direction: column;
         gap: 16px;
+        height: calc(100% - $height);
+        overflow-y: auto;
         margin: 24px 0;
         .control_box{
             .heading{
@@ -31,13 +35,56 @@
                 transition: 0.2s;
                 &:hover{
                     color: #fff;
-                    background-color: orangered;
+                    background-color: var(--hover_color);
         
                 }
                 .icon{
                     color: var(--color_primary);
                 }
+
+            }
+            .themes{
+                padding: 8px 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                .theme_item{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 12px;
+                    border: 2px solid #000;
+                    cursor: pointer;
+                    border-style: ridge;
+                    transition-duration: 0.2s;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                    &:active{
+                        transform: scale(0.9);
+                    }
+                    &:nth-child(1){
+                        background-color: var(--color_primary);
+                    }
+                    &:nth-child(2){
+                        background-color: #fff;
+                    }
+                    &:nth-child(3){
+                        background-color: var(--hover_color);
+                    }
+                }
+               
+            }
+            .active .icon{
+                color: #fff;
             }
         }
+        &::-webkit-scrollbar-thumb{
+            border-radius: 100%;
+        }
     }
+}
+.active{
+    color: #fff;
+    background-color: var(--active_color);
 }
