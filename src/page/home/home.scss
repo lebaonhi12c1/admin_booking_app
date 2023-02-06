@@ -1,7 +1,8 @@
 .home{
-    display: flex;
-    .home_container{
-        background-color: var(--color_primary);
-        flex: 5;
+    padding: 32px;
+    .widget_box{
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
     }
 }

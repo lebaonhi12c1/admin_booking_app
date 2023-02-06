@@ -1,8 +1,12 @@
 .sidebar{
     $height: 50px;
     flex: 1;
-    height: 100vh;
     border-right: 1px solid #ccc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 20%;
     .top{
         display: flex;
         justify-content: center;
@@ -79,8 +83,13 @@
                 color: #fff;
             }
         }
+        &::-webkit-scrollbar{
+            width: 8px;
+        }
         &::-webkit-scrollbar-thumb{
-            border-radius: 100%;
+            border-radius: 10px;
+            background-color: #ccc;
+            
         }
     }
 }

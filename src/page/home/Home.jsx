@@ -1,13 +1,14 @@
 import React from 'react';
-import Sidebar from '../../components/sidebar/Sidebar';
-import Navbar from '../../components/navbar/Navbar'
 import './home.scss'
+import Widget from '../../components/widget/Widget';
 function Home(props) {
     return (
-        <div className='home'>
-            <Sidebar/>
-            <div className="home_container">
-                <Navbar/>
+        <div className='home center_elemnt'>
+            <div className='widget_box'>
+                <Widget type = {'users'}/>
+                <Widget type = {'orders'}/>
+                <Widget type = {'earnings'}/>
+                <Widget type = {'balance'}/>
             </div>
         </div>
     );

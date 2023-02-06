@@ -5,9 +5,11 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 :root{
-    --color_primary: #333;
+    --color_primary: #444;
     --hover_color: #666;
-    --active_color: #333;
+    --active_color: #444;
+    --height_nav: 50px;
+    --width_sidebar: 20%;
 }
 ul{
     list-style: none;
@@ -17,4 +19,7 @@ input{
 }
 input:focus-within{
     outline: none;
+}
+.center_elemnt{
+    margin: var(--height_nav) 0 0 var(--width_sidebar)
 }
