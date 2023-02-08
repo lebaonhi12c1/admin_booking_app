@@ -1,0 +1,62 @@
+.feature{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 16px;
+    .heading{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #aaa;
+        font-size: 18px;
+        .heading_icon{
+            cursor: pointer;
+            transition-duration: 200s;
+            &:hover{
+                transform: scale(1.2);
+                border-radius: 50%;
+                background-color: #eee;
+            }
+        }
+    }
+    .proccess_bar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin: 16px 0;
+        .title{
+            color: #aaa;
+        }
+        .price{
+            font-size: 32px;
+        }
+        .sub{
+            text-align: center;
+            font-size: 12px;
+            color: #aaa;
+        }
+        .progress_item{
+            width: 200px;
+            height: 200px;
+            color: #444;
+        }
+    }
+    .sub_proccess{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        .sub_proccess_item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            .sub_core{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 4px
+            }
+        }
+        
+    }
+}

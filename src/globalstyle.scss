@@ -23,3 +23,10 @@ input:focus-within{
 .center_elemnt{
     margin: var(--height_nav) 0 0 var(--width_sidebar)
 }
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background-color: #aaa;
+}

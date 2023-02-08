@@ -17,7 +17,6 @@ function Sidebar(props) {
     const handleActive = function(e){
         setactive(e.target.innerText)
     }
-    console.log(active)
     return (
         <div className='sidebar'>
             <div className="top">

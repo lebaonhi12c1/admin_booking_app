@@ -5,4 +5,14 @@
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 16px;
     }
+    .chart_box{
+        display: grid;
+        grid-template-columns:repeat(3,minmax(0,1fr)) ;
+        gap: 16px;
+        margin: 16px 0;
+
+    }
+    .table_list{
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
 }
