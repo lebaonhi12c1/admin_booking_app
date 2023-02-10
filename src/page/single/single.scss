@@ -1,0 +1,74 @@
+.heading{
+    display: flex;
+    gap: 16px;
+    .info{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+        width: 33.33%;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px,
+        0px 2px 8px 0 rgba(99, 99, 99, 0.2);
+        .head{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .title{
+                font-size: 18px;
+                color: #aaa;
+                font-weight: bolder;
+            }
+            .btn_edit{
+                padding: 4px;
+                background-color: #444;
+                color: #fff;
+                cursor: pointer;
+                transition-duration: 200ms;
+                &:hover{
+                    background-color: #666;
+                    transform: scale(1.1);
+                }
+                &:active{
+                    background-color: #666;
+                    transform: scale(0.9);
+                }
+            }
+
+        }
+        .content{
+            display: flex;
+            gap: 12px;
+            .img{
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+            }
+            .content_info{
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                .head{
+                    font-size: 24px;
+                    font-weight: bold;
+                }
+                .content_list{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+                    .item{
+                        display: flex;
+                        gap: 4px;
+                        span:nth-child(2){
+                            color: #858585;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .chart_info{
+        width: 66.67%;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+
+}

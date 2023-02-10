@@ -12,6 +12,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import LogoutIcon from '@mui/icons-material/Logout';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
+import { Link } from 'react-router-dom';
 function Sidebar(props) {
     const [active, setactive] = useState('Dashboard')
     const handleActive = function(e){
@@ -24,30 +25,30 @@ function Sidebar(props) {
             </div>
             <div className="center">
                 <ul className="control_box">
-                    <div className="heading">Dashboard</div>
-                    <div className={`control_content ${active ==='Dashboard'&& 'active'}`} onClick={function(e){handleActive(e)}}>
+                    <div className="heading">Dashboard</div >
+                    <Link to={'/'} className={`control_content ${active ==='Dashboard'&& 'active'}`} onClick={function(e){handleActive(e)}}>
                         <DashboardIcon className='icon'/>
                         <div>Dashboard</div>
-                    </div>
+                    </Link>
                 </ul>
                 <ul className="control_box">
                     <div className="heading">Lists</div>
-                    <div className={`control_content ${active ==='User'&& 'active'}`}onClick={function(e){handleActive(e)}}>
+                    <Link to={'/users'} className={`control_content ${active ==='User'&& 'active'}`}onClick={function(e){handleActive(e)}}>
                         <PersonIcon className='icon'/>
                         <div>User</div>
-                    </div>
-                    <div className={`control_content ${active ==='Hotel'&& 'active'}`}onClick={function(e){handleActive(e)}}>
+                    </Link>
+                    <Link to={'/hotels'} className={`control_content ${active ==='Hotel'&& 'active'}`}onClick={function(e){handleActive(e)}}>
                         <HotelIcon className='icon'/>
                         <div>Hotel</div>
-                    </div>
-                    <div className={`control_content ${active ==='Room'&& 'active'}`}onClick={function(e){handleActive(e)}}>
+                    </Link>
+                    <Link to={'/rooms'} className={`control_content ${active ==='Room'&& 'active'}`}onClick={function(e){handleActive(e)}}>
                         <BedroomParentIcon className='icon'/>
                         <div>Room</div>
-                    </div>
-                    <div className={`control_content ${active ==='Order'&& 'active'}`}onClick={function(e){handleActive(e)}}>
+                    </Link>
+                    <Link to={'/orders'} className={`control_content ${active ==='Order'&& 'active'}`}onClick={function(e){handleActive(e)}}>
                         <CreditCardIcon className='icon'/>
                         <div>Order</div>
-                    </div>
+                    </Link>
                 </ul>
 
                 <ul className="control_box">

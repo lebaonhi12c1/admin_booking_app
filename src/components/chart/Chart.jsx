@@ -2,7 +2,7 @@
 import './chart.scss'
 import React, { PureComponent } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-function Chart(props) {
+function Chart({aspect,title}) {
     const data = [
         {
           name: 'January',
@@ -49,7 +49,7 @@ function Chart(props) {
       ];
     return (
         <div className='chart'>
-            <ResponsiveContainer width="100%" height="100%">
+            <ResponsiveContainer width="100%" aspect={aspect}>
                 <AreaChart
                 width={500}
                 height={400}
@@ -63,7 +63,7 @@ function Chart(props) {
                 >
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="name" />
-                {/* <YAxis dataKey='pv'/> */}
+                <YAxis />
                 <Tooltip />
                 <Area type="natural" dataKey="count" stroke="#B8B5E8" fill="#B8B5E8" />
                 </AreaChart>

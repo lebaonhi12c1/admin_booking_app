@@ -1,0 +1,45 @@
+
+.status{
+    padding: 8px;
+    border-radius: 4px;
+    text-align: center;
+    &.Active{
+        
+        color: green;
+        background-color: rgba(0, 209, 0,0.2)
+    }
+    &.Pending{
+        color: crimson;
+        background-color: rgba(213, 76, 103,0.2);
+    }
+    &.Passive{
+        color: rgb(207, 207, 1);
+        background-color: rgba(237, 237, 72, 0.2);
+    }
+}
+.action{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    .btn_action{
+        border: 1px solid #ccc;
+        padding: 4px;
+        cursor: pointer;
+        transition-duration: .2s;
+        user-select: none;
+        &:hover{
+            transform: scale(1.1);
+        }
+        &:active{
+            transform: scale(0.9);
+        }
+    }
+    .view{
+        border-color: rgb(3, 180, 239);
+        color:rgb(3, 180, 239);
+    }
+    .delete{
+        border-color: rgb(251, 77, 2);
+        color:rgb(251, 77, 2);
+    }
+}

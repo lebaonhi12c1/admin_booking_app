@@ -10,6 +10,7 @@
     justify-content: space-between;
     padding: 0 32px;
     background-color: #fff;
+    z-index: 10;
     .search_box{
         display: flex;
         align-items: center;
@@ -54,6 +55,9 @@
             }
         }
     }
+}
+.icon{
+    transition-duration: .2s;
 }
 .icon:hover{
     transform: scale(1.2);

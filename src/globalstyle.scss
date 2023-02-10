@@ -21,6 +21,7 @@ input:focus-within{
     outline: none;
 }
 .center_elemnt{
+    padding: 32px;
     margin: var(--height_nav) 0 0 var(--width_sidebar)
 }
 ::-webkit-scrollbar{
@@ -29,4 +30,8 @@ input:focus-within{
 ::-webkit-scrollbar-thumb{
     border-radius: 20px;
     background-color: #aaa;
+}
+a{
+    text-decoration: none;
+    color: #000;
 }

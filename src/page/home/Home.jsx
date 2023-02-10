@@ -16,7 +16,7 @@ function Home(props) {
             </div>
             <div className='chart_box'>
                 <Feature/>
-                <Chart/>
+                <Chart aspect={2/1} title='All Spending (Last 6 months)'/>
             </div>
             <div className='table_list'>
                 <TableList/>
