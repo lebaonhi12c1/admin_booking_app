@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import './datatable.scss'
+import { Link, useLocation } from 'react-router-dom';
 const columns = [
   { field: 'id', headerName: 'ID', width: 70 },
   {
@@ -49,6 +50,7 @@ const columns = [
  },
 ];
  const renderAction = function(){
+
     return {
         field: 'action',
         headerName: 'Action',
@@ -76,15 +78,26 @@ const rows = [
 ];
 
 export default function Datatable() {
+  const location = useLocation()
   return (
-    <div style={{ height: '600px', width: '100%' }}>
-      <DataGrid
-        rows={rows}
-        columns={columns.concat(renderAction())}
-        pageSize={9}
-        rowsPerPageOptions={[9]}
-        checkboxSelection
-      />
+    <div className="">
+        <div className="datatable_heading">
+          <div className='title'>
+            All your item
+          </div>
+          <Link to={`${location.pathname}/new`} className='btn_new'>
+            New
+          </Link>
+        </div>
+        <div style={{ height: '600px', width: '100%' }}>
+        <DataGrid className='datagrid'
+          rows={rows}
+          columns={columns.concat(renderAction())}
+          pageSize={9}
+          rowsPerPageOptions={[9]}
+          checkboxSelection
+        />
+      </div>
     </div>
   );
 }

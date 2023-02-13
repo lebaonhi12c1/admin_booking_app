@@ -65,3 +65,20 @@
 .icon:active{
     transform: scale(0.8);
 }
+
+.dark .navbar{
+    background-color: #000;
+    color: #fff;
+    input{
+        background-color: transparent;
+        color: #fff;
+        &::placeholder{
+            color: #fff;
+        }
+    }
+    .right_box{
+        .count{
+            background-color: #0BD0B6;
+        }
+    }
+}

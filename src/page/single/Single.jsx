@@ -4,7 +4,7 @@ import Chart from './../../components/chart/Chart';
 import TableList from './../../components/TableList/TableList';
 function Single(props) {
     return (
-        <div className='center_elemnt'>
+        <div className='single center_elemnt'>
             <div className="heading">
                 <div className='info'>
                     <div className='head'>

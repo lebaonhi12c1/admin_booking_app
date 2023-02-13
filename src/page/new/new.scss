@@ -11,6 +11,74 @@
             height: 400px;
             object-fit: cover;
         }
+        .thum_img{
+            margin-top: 16px;
+            .heading_thum{
+                margin: 16px 0;
+                width: 100%;
+                text-align: center;
+                label{
+                    cursor: pointer;
+                    &:hover{
+                        color: #0BD0B6;
+                    }
+                }
+            }
+            .thum_box_img{
+                display: flex;
+                flex-wrap: wrap;
+                gap:4px;
+                max-height: 155px;
+                overflow-y: auto;
+                .thum_item{
+                    position: relative;
+                    width: calc(33.33% - 4px);
+                    height:  75px;
+                    flex-shrink: 0;
+                    animation: fadein ease-in 200ms;
+                    @keyframes fadein {
+                        from{
+                            transform: scale(0);
+                        }
+                        to{
+                            transform: scale(1);
+                        }
+                    }
+                    img{
+                        width: 100%;
+                        object-fit: cover;
+                        height: 100%;  
+                    }
+                    .btn_delete_thum{
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        font-weight: bold;
+                        cursor: pointer;
+                        transition-duration: 200ms;
+                        background-color: #ccc;
+                        border-radius: 50%;
+                        width: 20px;
+                        height: 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        user-select: none;
+                        &:hover{
+                            color: aquamarine;
+                            transform: scale(1.4);
+                            background-color: #444;
+                        }
+                        &:active{
+                            
+                            transform: scale(0.9);
+                        }
+                    }
+                }
+            }
+            
+        }
     }
     .container_from{
         flex: 1;
@@ -18,8 +86,7 @@
         flex-direction: column;
         display: flex;
         gap: 16px;
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px,
-        0px 2px 8px 0px rgba(99, 99, 99, 0.2);
+        
         padding: 16px;
         .new_form{
             width: 100%;
@@ -44,7 +111,27 @@
                         border-width: 4px;
                     }
                 }
+                .choose_img{
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                    text-decoration: underline;
+                    cursor: pointer;
+                    &:hover{
+                        color:rgb(11, 208, 182);
+                    }
+                }
             }
+            .choose_item{
+                border: 1px solid #ccc;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:hover{
+                    border-color:aquamarine;
+                }
+            }
+            
         }
         .btn_send{
             padding: 4px;
@@ -66,4 +153,34 @@
             }
         }
     }
+}
+.dark .new_container{
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 35%;
+        background-color: #000;
+    }
+    input{
+        background-color: transparent;
+        color: #fff;
+    }
+    .btn_send{
+        background-color: #0BD0B6;
+        &:hover{
+            background-color: #0bd0b6cc;
+        }
+    }
+    .img_box{
+        box-shadow: 0 5px 10px #ccc;
+        border-radius: 10px;
+    }
+   
 }

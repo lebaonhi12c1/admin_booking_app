@@ -43,3 +43,49 @@
         color:rgb(251, 77, 2);
     }
 }
+.datatable_heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    .title{
+        font-size: 24px;
+        font-weight: bold;
+        color: #aaa;
+    }
+    .btn_new{
+        font-size: 18px;
+        padding: 8px;
+        border-radius: 4px;
+        color: #fff;
+        background-color: #444;
+        transition-duration: 200ms;
+        &:hover{
+            transform: scale(1.1);
+            background-color: #666;
+        }
+    }
+}
+
+
+.dark .status {
+    color: #fff;
+    &.Active{
+        
+        background-color: rgb(0, 186, 0)
+    }
+    &.Pending{
+        background-color: rgb(213, 76, 103);
+    }
+    &.Passive{
+        background-color: rgba(237, 237, 72, 0.808);
+    }
+}
+.dark .datatable_heading{
+    .btn_new{
+        background-color: #0BD0B6;
+    }
+}
+.dark .datagrid{
+    color: #fff ;
+}

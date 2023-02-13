@@ -1,9 +1,12 @@
 import './globalstyle.scss'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import { router } from './routes';
+import { useSelector } from 'react-redux';
+import { darkModeSelector } from './redux/reducer/themeSlice';
 function App() {
+  const theme = useSelector(darkModeSelector)
   return (
-    <div className="App">
+    <div className={`app ${theme ?'dark':''}`}>
       <Router>
         <Routes>
           {router.map(function(route,index){

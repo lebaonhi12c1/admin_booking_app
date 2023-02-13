@@ -13,10 +13,20 @@ import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import LogoutIcon from '@mui/icons-material/Logout';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { darkModeSelector,darkModeOn, darkModeOff } from './../../redux/reducer/themeSlice';
 function Sidebar(props) {
+    const theme = useSelector(darkModeSelector)
+    const dispatch = useDispatch()
     const [active, setactive] = useState('Dashboard')
     const handleActive = function(e){
         setactive(e.target.innerText)
+    }
+    const handleOnDarkMode = ()=>{
+        dispatch(darkModeOn())
+    }
+    const handleOffDarkMode = ()=>{
+        dispatch(darkModeOff())
     }
     return (
         <div className='sidebar'>
@@ -91,9 +101,8 @@ function Sidebar(props) {
                 <ul className='control_box'>
                     <div className='heading'>theme</div>
                     <div className='themes'>
-                        <div className='theme_item'></div>
-                        <div className='theme_item'></div>
-                        <div className='theme_item'></div>
+                        <div className='theme_item' onClick={handleOnDarkMode}></div>
+                        <div className='theme_item'onClick={handleOffDarkMode}></div>
                     </div>
                 </ul>
             </div>

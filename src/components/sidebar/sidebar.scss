@@ -97,3 +97,27 @@
     color: #fff;
     background-color: var(--active_color);
 }
+.dark .sidebar{
+    background-color: #000;
+    color: #fff;
+    .center{
+        .control_box{
+            .control_content{
+                color: #fff;
+            }
+            .active.control_content{
+                color: #000;
+            }
+            .icon{
+                color: #fff;
+            }
+            .active .icon{
+                color: #000;
+            }
+        }
+    }
+}
+.dark .active{
+    color: #000;
+    background-color: #0BD0B6;
+}

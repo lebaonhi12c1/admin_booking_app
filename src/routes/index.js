@@ -55,6 +55,21 @@ const router = [
         element: New,
         layout: Defautlayout,
     },
+    {
+        path: '/orders',
+        element: List,
+        layout: Defautlayout,
+    },
+    {
+        path: '/orders/:id',
+        element: Single,
+        layout: Defautlayout,
+    },
+    {
+        path: '/orders/new',
+        element: New,
+        layout: Defautlayout,
+    },
 ]
 
 
