@@ -19,5 +19,5 @@ export const themeSlice = createSlice({
 
 // Action creators are generated for each case reducer function
 export const { darkModeOn, darkModeOff } = themeSlice.actions
-export const darkModeSelector = state => state.theme.value
+export const darkModeSelector = state => state.persistedreducer.theme.value
 export default themeSlice.reducer

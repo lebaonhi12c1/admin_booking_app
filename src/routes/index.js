@@ -4,6 +4,7 @@ import List from './../page/list/List'
 import Single from './../page/single/Single';
 import New from './../page/new/New';
 import Defautlayout from '../layout/Defautlayout';
+import Login from '../page/login/Login';
 const router = [
     {
         path: '/',
@@ -69,6 +70,11 @@ const router = [
         path: '/orders/new',
         element: New,
         layout: Defautlayout,
+    },
+    {
+        path: '/login',
+        element: Login,
+        layout: null,
     },
 ]
 

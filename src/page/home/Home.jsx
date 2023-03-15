@@ -5,7 +5,16 @@ import Widget from '../../components/widget/Widget';
 import Chart from './../../components/chart/Chart';
 import Feature from '../../components/Freature/Feature';
 import TableList from '../../components/TableList/TableList';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { getuser } from '../../redux/reducer/userSlice';
 function Home(props) {
+    const navigation = useNavigate()
+    const user = useSelector(getuser)
+    useEffect(()=>{
+        user?.user === null && navigation('/login')
+    },[])
     return (
         <div className='home center_elemnt'>
             <div className='widget_box'>

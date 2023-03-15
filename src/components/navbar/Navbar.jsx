@@ -7,7 +7,20 @@ import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNone
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 import CropFreeOutlinedIcon from '@mui/icons-material/CropFreeOutlined';
 import ListOutlinedIcon from '@mui/icons-material/ListOutlined';
+import { useSelector, useDispatch } from 'react-redux';
+import { getuser, getuserlogout, getuserrequest } from '../../redux/reducer/userSlice';
+import { useNavigate } from 'react-router-dom';
 function Navbar(props) {
+    const user = useSelector(getuser)
+    const ditpatch = useDispatch()
+    const navigation = useNavigate()
+    const handlelogout = ()=>{
+        ditpatch(getuserrequest())
+        setTimeout(() => {
+            ditpatch(getuserlogout())
+            navigation('/login')
+        }, 1500);
+    }
     return (
         <div className='navbar'>
             <div className='search_box'>
@@ -37,8 +50,19 @@ function Navbar(props) {
                 <div>
                     <ListOutlinedIcon className='icon'/>
                 </div>
-                <div>
+                <div className='user'>
                     <img src="https://thuthuatnhanh.com/wp-content/uploads/2022/06/Anh-sieu-nhan-mau-do.jpg" alt="" className='user_img' />
+                    <div className='user-controls'>
+                        <div className='heading'>{user.user?.username}</div>
+                        <div className='controls'>
+                            <span>
+                                Setting
+                            </span>
+                            <span onClick={handlelogout}>
+                                Logout
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
