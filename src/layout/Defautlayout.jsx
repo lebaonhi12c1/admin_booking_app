@@ -12,7 +12,7 @@ function Defautlayout({children}) {
             <Sidebar/>
             <Navbar/>
             {children}
-            {user?.loading && <Lazyloading heading={'Loading...'}/>}
+            {user?.loading && <Lazyloading heading={'Logout...'}/>}
         </div>
     );
 }

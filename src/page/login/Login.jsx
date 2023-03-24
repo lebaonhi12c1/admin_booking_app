@@ -17,7 +17,7 @@ function Login(props) {
         if(userlogin.username !== '' && userlogin.password !== ''){
             dispatch(getuserrequest())
             try {
-                const res =await fetch('http://localhost:3000/api/auth/login',{
+                const res =await fetch(`${process.env.REACT_APP_domain}/api/auth/login`,{
                     method: 'post',
                     body: JSON.stringify(userlogin)
                 })
